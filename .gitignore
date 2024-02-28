@@ -1,0 +1,29 @@
+# .gitignore for Astro projects
+
+# Ignore the .astro directory and its contents
+.astro
+
+# Ignore any build artifacts or output files
+/dist
+/out
+
+# Ignore node_modules
+node_modules
+
+# Ignore environment-specific files
+.env
+
+# Ignore any editor-specific files
+.vscode
+.idea
+*.sublime-project
+*.sublime-workspace
+
+# Ignore package-lock.json (if using npm)
+package-lock.json
+
+# Ignore yarn.lock (if using Yarn)
+yarn.lock
+
+# Ignore yarn.lock (if using Yarn)
+pnpm-lock.yaml
