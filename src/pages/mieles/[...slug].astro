@@ -1,5 +1,6 @@
 ---
 import { type CollectionEntry, getCollection } from "astro:content";
+import PostLayout from "../../components/layouts/PostLayout.astro";
 
 interface Props {
   entry: CollectionEntry<"blog">;
@@ -21,7 +22,7 @@ const { entry } = Astro.props;
 const { Content } = await entry.render();
 ---
 
-<main>
-    <h1>{ entry.data.title }</h1>
-    <Content />
-</main>
+<PostLayout>
+  <h1>{entry.data.title}</h1>
+  <Content />
+</PostLayout>

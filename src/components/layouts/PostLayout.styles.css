@@ -1,0 +1,32 @@
+.blogPost :is(h1, h2, h3, h4, h5, h6) {
+  font-family: "Space Grotesk";
+  @apply font-black
+}
+
+.blogPost img {
+    @apply w-full rounded-3xl
+}
+
+.blogPost h1 {
+  @apply text-6xl;
+}
+
+.blogPost h2 {
+  @apply text-5xl;
+}
+
+.blogPost h3 {
+  @apply text-4xl;
+}
+
+.blogPost h4 {
+  @apply text-3xl;
+}
+
+.blogPost h5 {
+  @apply text-2xl;
+}
+
+.blogPost h6 {
+  @apply text-xl;
+}
