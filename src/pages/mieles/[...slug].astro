@@ -27,11 +27,10 @@ const { Content } = await entry.render();
     style={`background-image: url(${entry.data.imageUrl});`}
     class="w-full bg-no-repeat bg-cover rounded-md"
   >
-    <div class="p-5 pt-52 bg-gradient-to-b from-transparent to-black">
+    <div class="dataContainer">
       <h1 class="postTitle">{entry.data.title}</h1>
-      <div class="py-2">
+      <div class="flex flex-col gap-3 py-2 md:flex-row md:items-center">
         <span class="author">{entry.data.author}</span>
-        <span>|</span>
         <span class="date"
           >Publicado el {
             entry.data.date.toLocaleDateString("es", {
@@ -43,7 +42,7 @@ const { Content } = await entry.render();
         >
         <span></span>
       </div>
-      <div class="flex gap-2">
+      <div class="flex flex-wrap gap-2 p-1">
         {
           entry.data.tags.map((tag) => (
             <p class="bg-white text-[--background-dark-color] p-1 tag">{"#" + tag}</p>

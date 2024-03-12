@@ -3,33 +3,38 @@
 @tailwind utilities;
 
 :root {
-    /* Core */
-    --font-family-header: "Space Grotesk";
+  /* Core */
+  --font-family-header: "Space Grotesk";
 
-    /* Dark Theme colorscheme  */
-    --background-dark-color: #1f1f23;
-    --code-background-color: #1d1d23;
-    --code-surface-border-color: #393939;
-    --text-dark-color: #ebebeb;
-    --primary-color: #00ff80;
-    --link-visited-color: #41bf82;
+  /* Dark Theme colorscheme  */
+  --background-dark-color: #1f1f23;
+  --code-background-color: #1d1d23;
+  --code-surface-border-color: #393939;
+  --text-dark-color: #ebebeb;
+  --primary-color: #00ff80;
+  --link-visited-color: #41bf82;
 
-    /* Sizes */
-    --blog-top-margin: 130px;
+  /* Sizes */
+  --content-top-margin: 130px;
 }
 
 @layer base {
+  :is(h1, h2, h3, h4, h5, h6) {
+    filter: contrast(1.4);
+    font-family: var(--font-family-header);
+    @apply font-black;
+  }
 
-    header {
-        font-family: var(--font-family-header);
-    }
+  header {
+    font-family: var(--font-family-header);
+  }
 
-    footer {
-        font-family: var(--font-family-header);
-    }
+  footer {
+    font-family: var(--font-family-header);
+  }
 
-    html {
-        background-color: var(--background-dark-color);
-        color: var(--text-dark-color)
-    }
+  html {
+    background-color: var(--background-dark-color);
+    color: var(--text-dark-color);
+  }
 }

@@ -1,3 +1,11 @@
+article {
+  @apply w-full space-y-5 lg:max-w-[800px]
+}
+
+.dataContainer {
+  @apply p-5 pt-52 bg-gradient-to-b from-transparent to-black
+}
+
 .postTitle::before {
   content: "" !important;
 }
@@ -5,6 +13,7 @@
 .date {
   background-color: var(--primary-color);
   color: var(--background-dark-color);
+  width: fit-content;
   @apply p-1 rounded-sm font-mono font-black
 }
 
@@ -19,7 +28,7 @@
 }
 
 .blogPost {
-  margin-top: var(--blog-top-margin);
+  @apply mt-5 md:mt-[--content-top-margin]
 }
 
 .blogPost :is(h1, h2, h3, h4, h5, h6) {
