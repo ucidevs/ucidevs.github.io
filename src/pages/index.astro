@@ -7,13 +7,13 @@ import PostLayout from "../components/layouts/PostLayout.astro";
   <p>
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus perspiciatis animi
     voluptate corporis corrupti adipisci qui debitis minus culpa beatae numquam cum ea soluta
-    incidunt, quidem accusantium dignissimos vero dolorum? Lorem ipsum dolor sit amet consectetur
+    incidunt, quidem accusantium <a href="#">dignissimos vero dolorum?</a> Lorem ipsum dolor sit amet consectetur
     adipisicing elit. Deserunt, officiis repellat corrupti possimus assumenda distinctio dignissimos
     odit ullam debitis tempora, nulla vel voluptas, maxime aut? Incidunt fuga tempore vero quasi.
   </p>
   <h2>Hello World</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus perspiciatis animi
+    <strong>Lorem ipsum dolor sit amet,</strong> consectetur adipisicing elit. Necessitatibus perspiciatis animi
     voluptate corporis corrupti adipisci qui debitis minus culpa beatae numquam cum ea soluta
     incidunt, quidem accusantium dignissimos vero dolorum? Lorem ipsum dolor sit amet consectetur
     adipisicing elit. Deserunt, officiis repellat corrupti possimus assumenda distinctio dignissimos
@@ -52,4 +52,17 @@ import PostLayout from "../components/layouts/PostLayout.astro";
     adipisicing elit. Deserunt, officiis repellat corrupti possimus assumenda distinctio dignissimos
     odit ullam debitis tempora, nulla vel voluptas, maxime aut? Incidunt fuga tempore vero quasi.
   </p>
+
+  <pre>
+    <code>
+CREATE OR REPLACE FUNCTION name_of_function(param INTEGER)
+RETURNS VOID AS $$
+DECLARE var_name VARCHAR := "Initial Value"
+-- DECLARE .... Declarar mas variables iniciales, a utilizar
+BEGIN
+	-- Cuerpo de la funcion
+END
+$$ LANGUAGE plpgsql
+    </code>
+  </pre>
 </PostLayout>

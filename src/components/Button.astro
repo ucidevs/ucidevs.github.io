@@ -1,0 +1,12 @@
+---
+interface Props {
+  text: string;
+}
+
+const { text }: Props = Astro.props;
+---
+
+<button
+  class="p-3 bg-[var(--primary-color)] text-slate-950 font-bold uppercase hover:brightness-75 active:scale-90 transition-transform"
+  >{text}</button
+>

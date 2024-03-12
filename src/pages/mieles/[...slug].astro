@@ -23,6 +23,34 @@ const { Content } = await entry.render();
 ---
 
 <PostLayout>
-  <h1>{entry.data.title}</h1>
+  <div
+    style={`background-image: url(${entry.data.imageUrl});`}
+    class="w-full bg-no-repeat bg-cover rounded-md"
+  >
+    <div class="p-5 pt-52 bg-gradient-to-b from-transparent to-black">
+      <h1 class="postTitle">{entry.data.title}</h1>
+      <div class="py-2">
+        <span class="author">{entry.data.author}</span>
+        <span>|</span>
+        <span class="date"
+          >Publicado el {
+            entry.data.date.toLocaleDateString("es", {
+              year: "numeric",
+              month: "2-digit",
+              day: "2-digit",
+            })
+          }</span
+        >
+        <span></span>
+      </div>
+      <div class="flex gap-2">
+        {
+          entry.data.tags.map((tag) => (
+            <p class="bg-white text-[--background-dark-color] p-1 tag">{"#" + tag}</p>
+          ))
+        }
+      </div>
+    </div>
+  </div>
   <Content />
 </PostLayout>
