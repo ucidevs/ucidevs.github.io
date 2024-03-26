@@ -1,8 +1,13 @@
 ---
+import { getCollection } from "astro:content";
 import BaseLayout from "../components/layouts/BaseLayout.astro";
 import PostLayout from "../components/layouts/PostLayout.astro";
 import MainHero from "../components/MainHero.astro";
 import PostCard from "../components/PostCard.astro";
+
+const blogPosts = await getCollection("blog");
+const blogPostsData = blogPosts.map((blogPost) => blogPost.data);
+const blogPostsSlugs = blogPosts.map((blogPost) => blogPost.slug);
 ---
 
 <BaseLayout>
@@ -11,10 +16,18 @@ import PostCard from "../components/PostCard.astro";
     <section class="p-4 md:px-28">
       <h2 class="py-20 text-3xl">🗞️ Todos los posts</h2>
       <div class="flex flex-col items-center gap-3">
-        <PostCard />
-        <PostCard />
-        <PostCard />
-        <PostCard />
+        {
+          blogPostsData.map((data, index) => (
+            <PostCard
+              link={`/mieles/${blogPostsSlugs[index]}`}
+              title={data.title}
+              author={data.author}
+              date={data.date.toDateString()}
+              imageUrl={data.imageUrl}
+              tags={data.tags}
+            />
+          ))
+        }
       </div>
     </section>
   </main>
