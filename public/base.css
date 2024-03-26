@@ -15,7 +15,9 @@
   --link-visited-color: #41bf82;
 
   /* Sizes */
-  --content-top-margin: 130px;
+  --content-top-margin: 100px;
+  --hero-height: calc(100dvh - var(--content-top-margin));
+  --max-post-card-width: 825px;
 }
 
 @layer base {
@@ -36,5 +38,6 @@
   html {
     background-color: var(--background-dark-color);
     color: var(--text-dark-color);
+    min-height: 100vh;
   }
 }

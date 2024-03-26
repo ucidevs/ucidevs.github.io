@@ -1,8 +1,21 @@
 ---
 import BaseLayout from "../components/layouts/BaseLayout.astro";
 import PostLayout from "../components/layouts/PostLayout.astro";
+import MainHero from "../components/MainHero.astro";
+import PostCard from "../components/PostCard.astro";
 ---
 
 <BaseLayout>
-  <h1>El UCI Blog</h1>
+  <main class="w-full md:mt-[--content-top-margin]">
+    <MainHero />
+    <section class="p-4 md:px-28">
+      <h2 class="py-20 text-3xl">🗞️ Todos los posts</h2>
+      <div class="flex flex-col items-center gap-3">
+        <PostCard />
+        <PostCard />
+        <PostCard />
+        <PostCard />
+      </div>
+    </section>
+  </main>
 </BaseLayout>

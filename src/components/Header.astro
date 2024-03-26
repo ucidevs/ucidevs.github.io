@@ -1,5 +1,10 @@
 ---
+interface Props {
+  isBlog: boolean
+}
+
 import Button from "../components/Button.astro";
+const { isBlog } = Astro.props;
 ---
 
 <header
@@ -9,5 +14,6 @@ import Button from "../components/Button.astro";
         <img src="/images/uci-logo.png" class="w-20 brightness-0 invert" />
         <h2 class="text-4xl font-black">Devs</h2>
     </a>
-    <Button text="Publicar"/>
+
+    { isBlog && <Button text="Publicar"/> }
 </header>
