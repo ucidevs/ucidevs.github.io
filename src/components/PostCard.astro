@@ -1,9 +1,16 @@
 ---
+
+const dateFormat = new Intl.DateTimeFormat('es-ES', {
+ year: 'numeric',
+ month: 'long',
+ day: 'numeric',
+});
+
 interface Props {
   title: string;
   author: string;
   imageUrl: string;
-  date: string;
+  date: Date;
   tags: string[];
   fragment?: string;
   link: string
@@ -17,13 +24,13 @@ const props = Astro.props;
   href={props.link}
   >
   <img
-    src="https://th.bing.com/th/id/OIP.avb9nDfw3kq7NOoP0grM4wHaEK?rs=1&pid=ImgDetMain"
+    src={props.imageUrl}
     alt=""
     class="rounded-md md:w-72 aspect-video"
   />
   <div class="flex flex-col gap-2">
     <h3 class="text-3xl font-bold">{props.title}</h3>
-    <div><span class="text-[--primary-color]">🧑 {props.author}</span> | 📅 {props.date}</div>
+    <div><span class="text-[--primary-color]">🧑 {props.author}</span> | 📅 {dateFormat.format(props.date)}</div>
     <div class="flex gap-1">
       {props.tags.map((tag) => <span class="text-black bg-white ">#tag1</span>)}
     </div>

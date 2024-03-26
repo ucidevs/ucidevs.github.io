@@ -20,9 +20,10 @@ const blogPostsSlugs = blogPosts.map((blogPost) => blogPost.slug);
           blogPostsData.map((data, index) => (
             <PostCard
               link={`/mieles/${blogPostsSlugs[index]}`}
+              fragment={data.description}
               title={data.title}
               author={data.author}
-              date={data.date.toDateString()}
+              date={data.date}
               imageUrl={data.imageUrl}
               tags={data.tags}
             />

@@ -1,5 +1,6 @@
 ---
 title: El primer post
+description: "El primer post histórico que se hizo para la elaboración de este blog"
 date: 2014-07-12
 author: Alberto Sanchez
 imageUrl: https://th.bing.com/th/id/R.1ad1d8aadca5d63fedeac9ce7074a04a?rik=OelHXNQk2VLt7w&pid=ImgRaw&r=0

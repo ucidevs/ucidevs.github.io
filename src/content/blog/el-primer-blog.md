@@ -1,5 +1,6 @@
 ---
 title: El primer post
+description: "El primer post histórico que se hizo para la elaboración de este blog"
 date: 2019-07-23
 author: Leonardo Fabian Arencibia
 imageUrl: https://th.bing.com/th/id/OIP.XHoOizTBieYD6h253pow1wHaDK?rs=1&pid=ImgDetMain
@@ -31,9 +32,7 @@ RETURNS VOID AS $$
 DECLARE var_name VARCHAR := "Initial Value"
 -- DECLARE .... Declarar mas variables iniciales, a utilizar
 BEGIN
-	-- Cuerpo de la funcion
+ -- Cuerpo de la funcion
 END
 $$ LANGUAGE plpgsql
 ```
-
-
