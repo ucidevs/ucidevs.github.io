@@ -40,4 +40,10 @@
     color: var(--text-dark-color);
     min-height: 100vh;
   }
+
+  .tag {
+    padding-inline: 5px;
+    font-family: var(--font-family-header);
+    font-weight: 465;
+  }
 }

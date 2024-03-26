@@ -24,14 +24,15 @@ const props = Astro.props;
   >
   <img
     src={props.imageUrl}
-    alt=""
-    class="rounded-md md:w-72 aspect-video"
+    alt="PostImage"
+    class="object-contain rounded-md md:w-72 aspect-[16/9] bg-black"
   />
   <div class="flex flex-col gap-2">
     <h3 class="text-3xl font-bold">{props.title}</h3>
     <div><span class="text-[--primary-color]">🧑 {props.author}</span> | 📅 {dateFormat.format(props.date)}</div>
     <div class="flex gap-1">
-      {props.tags.map((tag) => <span class="text-black bg-white ">#tag1</span>)}
+      <span>🏷️</span>
+      {props.tags.map((tag) => <span class="text-black bg-white tag">{tag}</span>)}
     </div>
     <div>
       {props.fragment}

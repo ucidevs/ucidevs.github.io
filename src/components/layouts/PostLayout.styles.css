@@ -11,8 +11,6 @@ article {
 }
 
 .date {
-  background-color: var(--primary-color);
-  color: var(--background-dark-color);
   width: fit-content;
   @apply p-1 rounded-sm font-mono font-black
 }

@@ -1,7 +1,6 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../components/layouts/BaseLayout.astro";
-import PostLayout from "../components/layouts/PostLayout.astro";
 import MainHero from "../components/MainHero.astro";
 import PostCard from "../components/PostCard.astro";
 
@@ -10,7 +9,7 @@ const blogPostsData = blogPosts.map((blogPost) => blogPost.data);
 const blogPostsSlugs = blogPosts.map((blogPost) => blogPost.slug);
 ---
 
-<BaseLayout>
+<BaseLayout title="UCI Devs | Mieles">
   <main class="w-full md:mt-[--content-top-margin]">
     <MainHero />
     <section class="p-4 md:px-28">
