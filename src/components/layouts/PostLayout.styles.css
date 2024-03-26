@@ -44,7 +44,7 @@ article {
 }
 
 .blogPost img {
-  @apply w-full rounded-3xl;
+  @apply w-full mt-5 rounded-3xl;
 }
 
 .blogPost h1 {

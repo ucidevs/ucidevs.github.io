@@ -13,6 +13,8 @@
   --text-dark-color: #ebebeb;
   --primary-color: #00ff80;
   --link-visited-color: #41bf82;
+  --block-quote-border: #ffa600;
+  --block-quote-background: #333333;
 
   /* Sizes */
   --content-top-margin: 100px;
@@ -33,6 +35,22 @@
 
   footer {
     font-family: var(--font-family-header);
+  }
+
+  p {
+    font-size: 14pt;
+  }
+
+  blockquote {
+    background-color: var(--block-quote-background);
+    padding: 12px;
+    padding-left: 16px;
+    font-family: Space Grotesk;
+    border-left: 4px dashed var(--block-quote-border) !important;
+  }
+
+  blockquote strong {
+    color: var(--block-quote-border) !important;
   }
 
   html {

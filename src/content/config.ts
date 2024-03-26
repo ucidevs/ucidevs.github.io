@@ -9,6 +9,15 @@ const blogSchema = z.object({
   tags: z.array(z.string()),
 });
 
+const guidesSchema = z.object({
+  titlle: z.string()
+})
+
+const guidesContent = defineCollection({
+  type: "content",
+  schema: guidesSchema
+})
+
 const blogContent = defineCollection({
   type: "content",
   schema: blogSchema,
@@ -16,4 +25,5 @@ const blogContent = defineCollection({
 
 export const collections = {
   blog: blogContent,
+  guides: guidesSchema
 };
